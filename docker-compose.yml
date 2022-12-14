@@ -1,0 +1,23 @@
+services:
+    web:
+        build: .
+        depends_on:
+            - mysql
+        volumes:
+            - ./www:/var/www/html/
+        ports:
+            - 8080:80
+
+    mysql:
+        image: mysql
+        restart: always
+        volumes:
+            - user-data:/var/lib/mysql
+            - ./db:/docker-entrypoint-initdb.d/
+        environment:
+            MYSQL_ROOT_PASSWORD: 123
+            MYSQL_DATABASE: TariqDatabase
+        ports:
+          - 2342:3306
+volumes:
+  user-data:
