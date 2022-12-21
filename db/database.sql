@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `users` (
  );
 
 INSERT INTO users (username,email,password,trn_date) VALUES
-("abdul","chabdulrahmaan@gmail.com","123","2022-12-10");
+("tariq","tariqbinqasimm@gmail.com","123","2022-12-10");
